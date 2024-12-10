@@ -5,7 +5,6 @@ RUN mvn clean package -DskipTests  # Build the Spring Boot application
 
 # Stage 2: Create a lightweight runtime image
 FROM openjdk:17.0.1-jdk-slim
-WORKDIR /app
 COPY --from=build /target/server-0.0.1-SNAPSHOT.jar server.jar  # Copy the jar from the build stage to the runtime image
 EXPOSE 8080 
 ENTRYPOINT ["java", "-jar", "server.jar"]  # Command to run the Spring Boot application
