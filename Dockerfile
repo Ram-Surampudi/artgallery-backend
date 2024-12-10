@@ -8,5 +8,5 @@ RUN mvn clean package -DskipTests  # Build the Spring Boot application
 FROM openjdk:17.0.1-jdk-slim
 WORKDIR /app
 COPY --from=build /app/target/server-0.0.1-SNAPSHOT.jar server.jar  # Copy the jar from the build stage to the runtime image
-EXPOSE 8081  # Expose port 8081
+EXPOSE 8081  # Expose port 8080
 ENTRYPOINT ["java", "-jar", "server.jar"]  # Command to run the Spring Boot application
