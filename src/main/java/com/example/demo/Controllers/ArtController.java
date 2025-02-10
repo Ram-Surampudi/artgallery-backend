@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.UUID;
 
-@CrossOrigin
+@CrossOrigin(origins = "https://online-art-gallery-frontend-jfsd.vercel.app/")
 @RestController
 @RequestMapping("/art")
 public class ArtController {
