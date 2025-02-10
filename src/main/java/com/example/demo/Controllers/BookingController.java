@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.util.*;
 
-@CrossOrigin
+@CrossOrigin(origins = "https://online-art-gallery-frontend-jfsd.vercel.app/")
 @RestController
 @RequestMapping("/booking")
 public class BookingController {
